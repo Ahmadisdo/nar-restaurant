@@ -5,98 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NAR Restaurant Köln</title>
   <meta name="description" content="NAR Restaurant Köln – authentischer syrischer Geschmack, Shawarma, Grill und orientalische Spezialitäten. Frankfurter Str. 55, 51065 Köln.">
+
   <style>
-    *{box-sizing:border-box}
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
       font-family:Arial,Helvetica,sans-serif;
-      background:#0a0a0a;
+      background:#090909;
       color:#fff;
       line-height:1.5;
     }
+
     header{
       position:sticky;
       top:0;
-      z-index:10;
-      background:rgba(0,0,0,.95);
+      z-index:20;
+      background:rgba(0,0,0,.96);
       border-bottom:1px solid #7a5416;
-      padding:14px 18px;
+      padding:12px 18px;
       display:flex;
       justify-content:space-between;
       align-items:center;
     }
+
     .brand{
       color:#f3c969;
-      font-size:24px;
+      font-size:20px;
       font-weight:800;
-      letter-spacing:2px;
+      letter-spacing:1.5px;
     }
+
     .lang{
       background:#f3c969;
       color:#111;
       border:0;
       border-radius:30px;
-      padding:8px 13px;
+      padding:9px 14px;
       font-weight:700;
+      cursor:pointer;
     }
+
     .hero{
-      min-height:80vh;
-      padding:70px 22px 45px;
+      min-height:88vh;
+      padding:55px 22px 50px;
       display:flex;
       align-items:center;
+      justify-content:center;
       text-align:center;
-      justify-content:center;
       background:
-      radial-gradient(circle at center, rgba(255,116,0,.22), transparent 38%),
-      linear-gradient(180deg,#050505,#16100a);
+        radial-gradient(circle at center, rgba(255,116,0,.20), transparent 36%),
+        linear-gradient(180deg,#050505,#171007);
     }
-    .hero-inner{max-width:760px}
-    .logo{
-      width:170px;
-      height:170px;
-      margin:0 auto 25px;
-      border:2px solid #d69a2d;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      box-shadow:0 0 35px rgba(255,136,0,.25);
+
+    .hero-inner{
+      width:100%;
+      max-width:760px;
     }
-    .logo strong{
-      color:#f3c969;
-      font-size:54px;
-      line-height:1;
+
+    .logo-img{
+      width:280px;
+      max-width:88%;
+      height:auto;
+      display:block;
+      margin:0 auto 28px;
+      border-radius:22px;
+      box-shadow:0 0 38px rgba(255,145,35,.24);
     }
-    .logo span{
-      color:#f3c969;
-      font-size:14px;
-      letter-spacing:2px;
-    }
+
     h1{
       font-size:42px;
       margin:0 0 12px;
       color:#f6d57f;
     }
+
     .tagline{
       font-size:22px;
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
+
     .arabic{
       font-size:25px;
       color:#f3c969;
       direction:rtl;
       margin-bottom:25px;
     }
+
     .info{
-      margin:22px auto;
+      margin:24px auto;
       max-width:560px;
       background:#151515;
       border:1px solid #6c4b19;
       border-radius:18px;
       padding:18px;
+      box-shadow:0 8px 25px rgba(0,0,0,.25);
     }
-    .info div{margin:8px 0}
+
+    .info div{
+      margin:9px 0;
+    }
+
     .buttons{
       display:flex;
       flex-wrap:wrap;
@@ -104,6 +118,7 @@
       justify-content:center;
       margin-top:24px;
     }
+
     .btn{
       display:inline-block;
       text-decoration:none;
@@ -113,38 +128,45 @@
       background:#f3c969;
       color:#111;
     }
+
     .btn.alt{
       background:transparent;
       color:#f3c969;
       border:1px solid #f3c969;
     }
+
     section{
       padding:55px 20px;
       max-width:1000px;
       margin:auto;
     }
+
     h2{
       color:#f3c969;
       font-size:31px;
       margin-top:0;
       text-align:center;
     }
+
     .cards{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
       gap:16px;
       margin-top:30px;
     }
+
     .card{
       background:#151515;
       border:1px solid #4f3817;
       border-radius:16px;
       padding:20px;
     }
+
     .card h3{
       color:#f6d57f;
       margin-top:0;
     }
+
     .promo{
       background:linear-gradient(135deg,#8a1900,#ec6500);
       border-radius:18px;
@@ -152,29 +174,59 @@
       padding:25px;
       margin-top:30px;
     }
+
     .promo strong{
-      font-size:32px;
+      font-size:31px;
       display:block;
     }
+
     .contact{
       text-align:center;
       background:#111;
+      border:1px solid #3d2a11;
       border-radius:18px;
       padding:28px;
     }
+
     footer{
       text-align:center;
       padding:30px 20px;
       color:#aaa;
       border-top:1px solid #333;
     }
+
+    a{
+      transition:.2s ease;
+    }
+
+    a:active{
+      transform:scale(.98);
+    }
+
     @media(max-width:600px){
-      h1{font-size:34px}
-      .tagline{font-size:19px}
-      .hero{padding-top:55px}
+      h1{
+        font-size:34px;
+      }
+
+      .tagline{
+        font-size:19px;
+      }
+
+      .hero{
+        padding-top:45px;
+      }
+
+      .logo-img{
+        width:240px;
+      }
+
+      .brand{
+        font-size:16px;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -184,22 +236,29 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="logo">
-      <strong>NAR</strong>
-      <span>RESTAURANT</span>
-    </div>
 
-    <h1 data-de="Willkommen bei NAR" data-ar="أهلاً وسهلاً بكم في مطعم نار">
+    <img
+      src="IMG_2625.jpeg"
+      alt="NAR Restaurant Logo"
+      class="logo-img"
+    >
+
+    <h1
+      data-de="Willkommen bei NAR"
+      data-ar="أهلاً وسهلاً بكم في مطعم نار">
       Willkommen bei NAR
     </h1>
 
-    <div class="tagline"
+    <div
+      class="tagline"
       data-de="Authentischer syrischer Geschmack in Köln"
       data-ar="الطعم السوري الأصيل في كولن">
       Authentischer syrischer Geschmack in Köln
     </div>
 
-    <div class="arabic">الطعم السوري الأصيل</div>
+    <div class="arabic">
+      الطعم السوري الأصيل
+    </div>
 
     <div class="info">
       <div>📍 Frankfurter Str. 55, 51065 Köln</div>
@@ -208,80 +267,135 @@
     </div>
 
     <div class="buttons">
-      <a class="btn" href="tel:+492216200120">Jetzt anrufen</a>
-      <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Frankfurter+Str.+55,+51065+K%C3%B6ln" target="_blank">Route planen</a>
-      <a class="btn alt" href="https://www.instagram.com/restaurant_nar_koeln/" target="_blank">Instagram</a>
+      <a class="btn" href="tel:+492216200120">
+        Jetzt anrufen
+      </a>
+
+      <a
+        class="btn alt"
+        href="https://www.google.com/maps/search/?api=1&query=Frankfurter+Str.+55,+51065+K%C3%B6ln"
+        target="_blank">
+        Route planen
+      </a>
+
+      <a
+        class="btn alt"
+        href="https://www.instagram.com/restaurant_nar_koeln/"
+        target="_blank">
+        Instagram
+      </a>
     </div>
+
   </div>
 </div>
 
 <section>
-  <h2 data-de="Unsere Spezialitäten" data-ar="تخصصاتنا">Unsere Spezialitäten</h2>
+  <h2 data-de="Unsere Spezialitäten" data-ar="تخصصاتنا">
+    Unsere Spezialitäten
+  </h2>
 
   <div class="cards">
+
     <div class="card">
       <h3>Shawarma</h3>
-      <p data-de="Frisch zubereitete syrische Shawarma mit kräftigen orientalischen Aromen."
-         data-ar="شاورما سورية طازجة محضرة بنكهات شرقية أصيلة.">
-         Frisch zubereitete syrische Shawarma mit kräftigen orientalischen Aromen.
+      <p
+        data-de="Frisch zubereitete syrische Shawarma mit kräftigen orientalischen Aromen."
+        data-ar="شاورما سورية طازجة محضرة بنكهات شرقية أصيلة.">
+        Frisch zubereitete syrische Shawarma mit kräftigen orientalischen Aromen.
       </p>
     </div>
 
     <div class="card">
       <h3>Grill</h3>
-      <p data-de="Saftige Fleischspieße, Lamm, Hähnchen und gemischte Grillgerichte."
-         data-ar="مشاوي متنوعة من اللحم والدجاج والخروف.">
-         Saftige Fleischspieße, Lamm, Hähnchen und gemischte Grillgerichte.
+      <p
+        data-de="Saftige Fleischspieße, Lamm, Hähnchen und gemischte Grillgerichte."
+        data-ar="مشاوي متنوعة من اللحم والدجاج والخروف.">
+        Saftige Fleischspieße, Lamm, Hähnchen und gemischte Grillgerichte.
       </p>
     </div>
 
     <div class="card">
       <h3>Orientalische Spezialitäten</h3>
-      <p data-de="Hummus, Mutabel, Fatoush, Tabouleh und viele weitere Klassiker."
-         data-ar="حمص، متبل، فتوش، تبولة والعديد من الأطباق الشرقية.">
-         Hummus, Mutabel, Fatoush, Tabouleh und viele weitere Klassiker.
+      <p
+        data-de="Hummus, Mutabel, Fatoush, Tabouleh und viele weitere Klassiker."
+        data-ar="حمص، متبل، فتوش، تبولة والعديد من الأطباق الشرقية.">
+        Hummus, Mutabel, Fatoush, Tabouleh und viele weitere Klassiker.
       </p>
     </div>
+
   </div>
 
   <div class="promo">
-    <strong data-de="Neueröffnung 11.09.2026" data-ar="الافتتاح 11.09.2026">
+    <strong
+      data-de="Neueröffnung 11.09.2026"
+      data-ar="الافتتاح 11.09.2026">
       Neueröffnung 11.09.2026
     </strong>
-    <div data-de="3 Tage Eröffnungsangebot: Shawarma nur 3 €"
-         data-ar="عرض الافتتاح لمدة 3 أيام: شاورما فقط 3 €">
+
+    <div
+      data-de="3 Tage Eröffnungsangebot: Shawarma nur 3 €"
+      data-ar="عرض الافتتاح لمدة 3 أيام: شاورما فقط 3 €">
       3 Tage Eröffnungsangebot: Shawarma nur 3 €
     </div>
   </div>
 </section>
 
 <section>
-  <h2 data-de="Über uns" data-ar="من نحن">Über uns</h2>
+  <h2 data-de="Über uns" data-ar="من نحن">
+    Über uns
+  </h2>
+
   <div class="contact">
-    <p data-de="NAR Restaurant steht für authentischen syrischen Geschmack, frische Zubereitung und herzliche Gastfreundschaft. Besuchen Sie uns in Köln-Mülheim und genießen Sie Shawarma, Grillgerichte und orientalische Spezialitäten."
-       data-ar="مطعم نار يقدم الطعم السوري الأصيل، أطباقاً طازجة وضيافة من القلب. زورونا في كولن واستمتعوا بالشاورما والمشاوي والمأكولات الشرقية.">
-       NAR Restaurant steht für authentischen syrischen Geschmack, frische Zubereitung und herzliche Gastfreundschaft. Besuchen Sie uns in Köln-Mülheim und genießen Sie Shawarma, Grillgerichte und orientalische Spezialitäten.
+    <p
+      data-de="NAR Restaurant steht für authentischen syrischen Geschmack, frische Zubereitung und herzliche Gastfreundschaft. Besuchen Sie uns in Köln-Mülheim und genießen Sie Shawarma, Grillgerichte und orientalische Spezialitäten."
+      data-ar="مطعم نار يقدم الطعم السوري الأصيل، أطباقاً طازجة وضيافة من القلب. زورونا في كولن واستمتعوا بالشاورما والمشاوي والمأكولات الشرقية.">
+      NAR Restaurant steht für authentischen syrischen Geschmack, frische Zubereitung und herzliche Gastfreundschaft. Besuchen Sie uns in Köln-Mülheim und genießen Sie Shawarma, Grillgerichte und orientalische Spezialitäten.
     </p>
   </div>
 </section>
 
 <section>
-  <h2 data-de="Kontakt & Anfahrt" data-ar="التواصل والعنوان">Kontakt & Anfahrt</h2>
+  <h2 data-de="Kontakt & Anfahrt" data-ar="التواصل والعنوان">
+    Kontakt & Anfahrt
+  </h2>
 
   <div class="contact">
     <p><strong>NAR Restaurant</strong></p>
     <p>Frankfurter Str. 55<br>51065 Köln</p>
-    <p>Telefon: <a href="tel:+492216200120" style="color:#f3c969">0221 6200120</a></p>
-    <p>Öffnungszeiten: täglich 11:00–03:00 Uhr</p>
+
     <p>
-      <a href="https://www.instagram.com/restaurant_nar_koeln/" target="_blank" style="color:#f3c969">
+      Telefon:
+      <a href="tel:+492216200120" style="color:#f3c969">
+        0221 6200120
+      </a>
+    </p>
+
+    <p>Öffnungszeiten: täglich 11:00–03:00 Uhr</p>
+
+    <p>
+      <a
+        href="https://www.instagram.com/restaurant_nar_koeln/"
+        target="_blank"
+        style="color:#f3c969">
         @restaurant_nar_koeln
       </a>
     </p>
 
     <div class="buttons">
-      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Frankfurter+Str.+55,+51065+K%C3%B6ln" target="_blank">Google Maps</a>
-      <a class="btn alt" href="tel:+492216200120">Anrufen</a>
+
+      <a
+        class="btn"
+        href="https://www.google.com/maps/search/?api=1&query=Frankfurter+Str.+55,+51065+K%C3%B6ln"
+        target="_blank">
+        Google Maps
+      </a>
+
+      <a
+        class="btn alt"
+        href="tel:+492216200120">
+        Anrufen
+      </a>
+
     </div>
   </div>
 </section>
@@ -295,6 +409,7 @@
 
   function toggleLang(){
     arabic = !arabic;
+
     document.documentElement.lang = arabic ? "ar" : "de";
     document.body.dir = arabic ? "rtl" : "ltr";
 
