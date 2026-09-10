@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>NAR Restaurant Köln</title>
-  <meta name="description" content="NAR Restaurant Köln – authentischer syrischer Geschmack, Shawarma, Grill und orientalische Spezialitäten. Frankfurter Str. 55, 51065 Köln.">
+
+  <meta
+    name="description"
+    content="NAR Restaurant Köln – authentische syrische und orientalische Spezialitäten, Shawarma, Grill, Sandwiches und mehr."
+  >
 
   <style>
     *{
@@ -18,210 +23,391 @@
     body{
       margin:0;
       font-family:Arial,Helvetica,sans-serif;
-      background:#090909;
+      background:#080808;
       color:#fff;
       line-height:1.5;
+    }
+
+    body[dir="rtl"]{
+      font-family:Arial,Tahoma,sans-serif;
+    }
+
+    a{
+      color:inherit;
     }
 
     header{
       position:sticky;
       top:0;
-      z-index:20;
+      z-index:100;
       background:rgba(0,0,0,.96);
-      border-bottom:1px solid #7a5416;
-      padding:12px 18px;
+      border-bottom:1px solid #8f641d;
+      padding:11px 16px;
       display:flex;
-      justify-content:space-between;
       align-items:center;
+      justify-content:space-between;
+      gap:10px;
     }
 
     .brand{
       color:#f3c969;
-      font-size:20px;
-      font-weight:800;
+      font-size:18px;
+      font-weight:900;
       letter-spacing:1.5px;
+      white-space:nowrap;
+    }
+
+    .header-actions{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .header-btn{
+      border:1px solid #c99432;
+      background:#151515;
+      color:#f3c969;
+      border-radius:999px;
+      padding:8px 11px;
+      font-weight:800;
+      text-decoration:none;
+      cursor:pointer;
     }
 
     .lang{
       background:#f3c969;
       color:#111;
-      border:0;
-      border-radius:30px;
-      padding:9px 14px;
-      font-weight:700;
-      cursor:pointer;
     }
 
     .hero{
       min-height:88vh;
-      padding:55px 22px 50px;
+      padding:55px 20px;
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
       text-align:center;
       background:
-        radial-gradient(circle at center, rgba(255,116,0,.20), transparent 36%),
-        linear-gradient(180deg,#050505,#171007);
+        radial-gradient(circle at center, rgba(255,111,0,.23), transparent 35%),
+        linear-gradient(180deg,#050505,#171008);
     }
 
     .hero-inner{
-      width:100%;
       max-width:760px;
+      width:100%;
     }
 
     .logo-img{
-      width:280px;
+      width:300px;
       max-width:88%;
       height:auto;
       display:block;
-      margin:0 auto 28px;
-      border-radius:22px;
-      box-shadow:0 0 38px rgba(255,145,35,.24);
+      margin:0 auto 25px;
+      border-radius:24px;
+      box-shadow:0 0 42px rgba(255,143,22,.22);
     }
 
     h1{
-      font-size:42px;
-      margin:0 0 12px;
       color:#f6d57f;
+      font-size:42px;
+      margin:0 0 10px;
     }
 
     .tagline{
-      font-size:22px;
+      font-size:21px;
       margin-bottom:8px;
     }
 
-    .arabic{
-      font-size:25px;
-      color:#f3c969;
+    .arabic-line{
       direction:rtl;
-      margin-bottom:25px;
+      color:#f3c969;
+      font-size:24px;
+      margin-bottom:23px;
     }
 
     .info{
+      max-width:570px;
       margin:24px auto;
-      max-width:560px;
-      background:#151515;
-      border:1px solid #6c4b19;
-      border-radius:18px;
       padding:18px;
-      box-shadow:0 8px 25px rgba(0,0,0,.25);
+      border-radius:18px;
+      background:#141414;
+      border:1px solid #654718;
     }
 
     .info div{
-      margin:9px 0;
+      margin:8px 0;
     }
 
     .buttons{
       display:flex;
-      flex-wrap:wrap;
-      gap:12px;
       justify-content:center;
-      margin-top:24px;
+      flex-wrap:wrap;
+      gap:11px;
+      margin-top:22px;
     }
 
     .btn{
       display:inline-block;
-      text-decoration:none;
       border-radius:999px;
-      padding:13px 19px;
-      font-weight:800;
+      padding:13px 18px;
+      text-decoration:none;
+      font-weight:900;
       background:#f3c969;
       color:#111;
+      border:1px solid #f3c969;
     }
 
     .btn.alt{
       background:transparent;
       color:#f3c969;
-      border:1px solid #f3c969;
+    }
+
+    .menu-button{
+      font-size:17px;
+      padding:15px 23px;
     }
 
     section{
-      padding:55px 20px;
-      max-width:1000px;
+      max-width:1050px;
       margin:auto;
+      padding:55px 18px;
     }
 
     h2{
       color:#f3c969;
-      font-size:31px;
-      margin-top:0;
       text-align:center;
+      font-size:32px;
+      margin:0 0 12px;
     }
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-      gap:16px;
-      margin-top:30px;
-    }
-
-    .card{
-      background:#151515;
-      border:1px solid #4f3817;
-      border-radius:16px;
-      padding:20px;
-    }
-
-    .card h3{
-      color:#f6d57f;
-      margin-top:0;
+    .section-subtitle{
+      max-width:700px;
+      text-align:center;
+      color:#bbb;
+      margin:0 auto 30px;
     }
 
     .promo{
-      background:linear-gradient(135deg,#8a1900,#ec6500);
-      border-radius:18px;
-      text-align:center;
+      max-width:850px;
+      margin:0 auto;
       padding:25px;
-      margin-top:30px;
+      text-align:center;
+      border-radius:20px;
+      background:linear-gradient(135deg,#8a1900,#ec6500);
+      box-shadow:0 10px 35px rgba(0,0,0,.35);
     }
 
     .promo strong{
-      font-size:31px;
       display:block;
+      font-size:31px;
+    }
+
+    .menu-area{
+      max-width:1100px;
+    }
+
+    .menu-toolbar{
+      position:sticky;
+      top:63px;
+      z-index:50;
+      background:rgba(8,8,8,.97);
+      padding:12px 0 14px;
+      border-bottom:1px solid #34240e;
+      margin-bottom:24px;
+    }
+
+    .menu-search{
+      width:100%;
+      border:1px solid #6c4b19;
+      background:#151515;
+      color:white;
+      border-radius:14px;
+      padding:13px 15px;
+      font-size:16px;
+      outline:none;
+      margin-bottom:12px;
+    }
+
+    .menu-search::placeholder{
+      color:#888;
+    }
+
+    .category-nav{
+      display:flex;
+      overflow-x:auto;
+      gap:8px;
+      padding-bottom:3px;
+      scrollbar-width:none;
+    }
+
+    .category-nav::-webkit-scrollbar{
+      display:none;
+    }
+
+    .category-nav button{
+      white-space:nowrap;
+      border-radius:999px;
+      border:1px solid #6c4b19;
+      background:#151515;
+      color:#f3c969;
+      padding:9px 13px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .category-nav button:hover{
+      background:#251a0d;
+    }
+
+    .menu-category{
+      margin:38px 0 50px;
+      scroll-margin-top:145px;
+    }
+
+    .category-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:16px;
+    }
+
+    body[dir="rtl"] .category-title{
+      flex-direction:row-reverse;
+      justify-content:flex-end;
+    }
+
+    .category-title h3{
+      color:#f6d57f;
+      font-size:28px;
+      margin:0;
+    }
+
+    .category-line{
+      flex:1;
+      height:1px;
+      background:linear-gradient(90deg,#9b6d22,transparent);
+    }
+
+    body[dir="rtl"] .category-line{
+      background:linear-gradient(270deg,#9b6d22,transparent);
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+    }
+
+    .menu-item{
+      background:#121212;
+      border:1px solid #3f2c12;
+      border-radius:16px;
+      padding:15px;
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+    }
+
+    .menu-item-main{
+      min-width:0;
+    }
+
+    .menu-item-title{
+      font-size:17px;
+      font-weight:900;
+      color:#fff;
+      margin-bottom:3px;
+    }
+
+    .menu-item-ar{
+      direction:rtl;
+      text-align:left;
+      color:#d9ad55;
+      font-size:15px;
+      margin-bottom:5px;
+    }
+
+    body[dir="rtl"] .menu-item-ar{
+      text-align:right;
+    }
+
+    .menu-description{
+      color:#aaa;
+      font-size:13px;
+    }
+
+    .menu-price{
+      flex-shrink:0;
+      color:#f3c969;
+      font-size:18px;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .allergy-note{
+      margin-top:18px;
+      border:1px solid #6c4b19;
+      background:#151515;
+      color:#bbb;
+      border-radius:14px;
+      padding:15px;
+      text-align:center;
     }
 
     .contact{
       text-align:center;
       background:#111;
-      border:1px solid #3d2a11;
-      border-radius:18px;
+      border:1px solid #3c2a11;
+      border-radius:20px;
       padding:28px;
     }
 
     footer{
       text-align:center;
-      padding:30px 20px;
-      color:#aaa;
-      border-top:1px solid #333;
+      padding:30px 18px;
+      color:#999;
+      border-top:1px solid #292929;
     }
 
-    a{
-      transition:.2s ease;
+    .hidden{
+      display:none !important;
     }
 
-    a:active{
-      transform:scale(.98);
-    }
+    @media(max-width:720px){
+      .menu-grid{
+        grid-template-columns:1fr;
+      }
 
-    @media(max-width:600px){
       h1{
         font-size:34px;
       }
 
-      .tagline{
-        font-size:19px;
+      h2{
+        font-size:29px;
       }
 
-      .hero{
-        padding-top:45px;
+      .tagline{
+        font-size:18px;
       }
 
       .logo-img{
-        width:240px;
+        width:250px;
       }
 
       .brand{
-        font-size:16px;
+        font-size:15px;
+      }
+
+      .header-btn{
+        font-size:13px;
+        padding:7px 9px;
+      }
+
+      .menu-toolbar{
+        top:57px;
+      }
+
+      .menu-category{
+        scroll-margin-top:140px;
       }
     }
   </style>
@@ -231,16 +417,21 @@
 
 <header>
   <div class="brand">NAR RESTAURANT</div>
-  <button class="lang" onclick="toggleLang()">DE / عربي</button>
+
+  <div class="header-actions">
+    <a class="header-btn" href="#menu">Menü</a>
+    <button class="header-btn lang" onclick="toggleLang()">DE / عربي</button>
+  </div>
 </header>
+
 
 <div class="hero">
   <div class="hero-inner">
 
     <img
       src="IMG_2625.jpeg"
-      alt="NAR Restaurant Logo"
       class="logo-img"
+      alt="NAR Restaurant Logo"
     >
 
     <h1
@@ -256,7 +447,7 @@
       Authentischer syrischer Geschmack in Köln
     </div>
 
-    <div class="arabic">
+    <div class="arabic-line">
       الطعم السوري الأصيل
     </div>
 
@@ -267,7 +458,12 @@
     </div>
 
     <div class="buttons">
-      <a class="btn" href="tel:+492216200120">
+
+      <a class="btn menu-button" href="#menu">
+        🍽️ Speisekarte ansehen
+      </a>
+
+      <a class="btn alt" href="tel:+492216200120">
         Jetzt anrufen
       </a>
 
@@ -284,48 +480,15 @@
         target="_blank">
         Instagram
       </a>
-    </div>
 
+    </div>
   </div>
 </div>
 
+
 <section>
-  <h2 data-de="Unsere Spezialitäten" data-ar="تخصصاتنا">
-    Unsere Spezialitäten
-  </h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Shawarma</h3>
-      <p
-        data-de="Frisch zubereitete syrische Shawarma mit kräftigen orientalischen Aromen."
-        data-ar="شاورما سورية طازجة محضرة بنكهات شرقية أصيلة.">
-        Frisch zubereitete syrische Shawarma mit kräftigen orientalischen Aromen.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Grill</h3>
-      <p
-        data-de="Saftige Fleischspieße, Lamm, Hähnchen und gemischte Grillgerichte."
-        data-ar="مشاوي متنوعة من اللحم والدجاج والخروف.">
-        Saftige Fleischspieße, Lamm, Hähnchen und gemischte Grillgerichte.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Orientalische Spezialitäten</h3>
-      <p
-        data-de="Hummus, Mutabel, Fatoush, Tabouleh und viele weitere Klassiker."
-        data-ar="حمص، متبل، فتوش، تبولة والعديد من الأطباق الشرقية.">
-        Hummus, Mutabel, Fatoush, Tabouleh und viele weitere Klassiker.
-      </p>
-    </div>
-
-  </div>
-
   <div class="promo">
+
     <strong
       data-de="Neueröffnung 11.09.2026"
       data-ar="الافتتاح 11.09.2026">
@@ -337,31 +500,89 @@
       data-ar="عرض الافتتاح لمدة 3 أيام: شاورما فقط 3 €">
       3 Tage Eröffnungsangebot: Shawarma nur 3 €
     </div>
+
   </div>
 </section>
 
+
+<section id="menu" class="menu-area">
+
+  <h2
+    data-de="Unsere Speisekarte"
+    data-ar="قائمة الطعام">
+    Unsere Speisekarte
+  </h2>
+
+  <p
+    class="section-subtitle"
+    data-de="Entdecke unsere orientalischen Spezialitäten, Shawarma, Grillgerichte, Sandwiches, Desserts und Getränke."
+    data-ar="اكتشفوا الشاورما والمشاوي والمقبلات والسندويشات والحلويات والمشروبات.">
+    Entdecke unsere orientalischen Spezialitäten, Shawarma, Grillgerichte,
+    Sandwiches, Desserts und Getränke.
+  </p>
+
+  <div class="menu-toolbar">
+
+    <input
+      id="menuSearch"
+      class="menu-search"
+      type="search"
+      placeholder="Gericht suchen..."
+      oninput="filterMenu()"
+    >
+
+    <div id="categoryNav" class="category-nav"></div>
+
+  </div>
+
+  <div id="menuContainer"></div>
+
+  <div class="allergy-note">
+    <strong>Allergiker-Hinweis:</strong>
+    Alle unsere Produkte enthalten Eier, Milch, Laktose und Sesam.
+  </div>
+
+</section>
+
+
 <section>
-  <h2 data-de="Über uns" data-ar="من نحن">
+
+  <h2
+    data-de="Über uns"
+    data-ar="من نحن">
     Über uns
   </h2>
 
   <div class="contact">
     <p
       data-de="NAR Restaurant steht für authentischen syrischen Geschmack, frische Zubereitung und herzliche Gastfreundschaft. Besuchen Sie uns in Köln-Mülheim und genießen Sie Shawarma, Grillgerichte und orientalische Spezialitäten."
-      data-ar="مطعم نار يقدم الطعم السوري الأصيل، أطباقاً طازجة وضيافة من القلب. زورونا في كولن واستمتعوا بالشاورما والمشاوي والمأكولات الشرقية.">
-      NAR Restaurant steht für authentischen syrischen Geschmack, frische Zubereitung und herzliche Gastfreundschaft. Besuchen Sie uns in Köln-Mülheim und genießen Sie Shawarma, Grillgerichte und orientalische Spezialitäten.
+      data-ar="مطعم نار يقدم الطعم السوري الأصيل والأطباق الطازجة والضيافة من القلب. زورونا في كولن واستمتعوا بالشاورما والمشاوي والمأكولات الشرقية.">
+      NAR Restaurant steht für authentischen syrischen Geschmack,
+      frische Zubereitung und herzliche Gastfreundschaft.
+      Besuchen Sie uns in Köln-Mülheim und genießen Sie Shawarma,
+      Grillgerichte und orientalische Spezialitäten.
     </p>
   </div>
+
 </section>
 
+
 <section>
-  <h2 data-de="Kontakt & Anfahrt" data-ar="التواصل والعنوان">
+
+  <h2
+    data-de="Kontakt & Anfahrt"
+    data-ar="التواصل والعنوان">
     Kontakt & Anfahrt
   </h2>
 
   <div class="contact">
+
     <p><strong>NAR Restaurant</strong></p>
-    <p>Frankfurter Str. 55<br>51065 Köln</p>
+
+    <p>
+      Frankfurter Str. 55<br>
+      51065 Köln
+    </p>
 
     <p>
       Telefon:
@@ -370,7 +591,9 @@
       </a>
     </p>
 
-    <p>Öffnungszeiten: täglich 11:00–03:00 Uhr</p>
+    <p>
+      Öffnungszeiten: täglich 11:00–03:00 Uhr
+    </p>
 
     <p>
       <a
@@ -390,33 +613,866 @@
         Google Maps
       </a>
 
-      <a
-        class="btn alt"
-        href="tel:+492216200120">
+      <a class="btn alt" href="tel:+492216200120">
         Anrufen
       </a>
 
     </div>
+
   </div>
 </section>
+
 
 <footer>
   © 2026 NAR Restaurant · Köln
 </footer>
 
+
 <script>
-  let arabic = false;
 
-  function toggleLang(){
-    arabic = !arabic;
+const menuData = [
 
-    document.documentElement.lang = arabic ? "ar" : "de";
-    document.body.dir = arabic ? "rtl" : "ltr";
+  {
+    title:"Vorspeisen",
+    arabic:"المقبلات",
+    items:[
 
-    document.querySelectorAll("[data-de]").forEach(el => {
-      el.textContent = arabic ? el.dataset.ar : el.dataset.de;
-    });
+      {
+        name:"Linsensuppe",
+        ar:"شوربة عدس",
+        price:"5,90 €",
+        desc:"Hausgemachte Linsensuppe nach orientalischer Art."
+      },
+
+      {
+        name:"Hummus",
+        ar:"حمص",
+        price:"5,00 €",
+        desc:"Cremige Kichererbsen mit Sesam, Zitronensaft und Olivenöl."
+      },
+
+      {
+        name:"Mutabel",
+        ar:"متبل",
+        price:"5,00 €",
+        desc:"Cremige Auberginen mit Sesam, Knoblauch und Zitronensaft."
+      },
+
+      {
+        name:"Pommes",
+        ar:"صحن بطاطا",
+        price:"4,00 €",
+        desc:"Knusprige Pommes frites."
+      },
+
+      {
+        name:"Reis Teller",
+        ar:"صحن رز",
+        price:"4,00 €",
+        desc:"Duftender Basmatireis."
+      },
+
+      {
+        name:"Gebratenes Kibbeh",
+        ar:"كبة مقلية",
+        price:"4,00 €",
+        desc:"Gefüllte Bulgur-Kroketten mit Rindfleisch und Gewürzen."
+      },
+
+      {
+        name:"Gegrilltes Kibbeh",
+        ar:"كبة مشوية",
+        price:"5,00 €",
+        desc:"Gegrillte Bulgur-Kroketten mit würziger Füllung."
+      },
+
+      {
+        name:"Gefüllte Weinblätter",
+        ar:"يالانجي",
+        price:"7,90 €",
+        desc:"Weinblätter gefüllt mit Kräutern und Gewürzen."
+      },
+
+      {
+        name:"Knoblauchsauce",
+        ar:"كريم ثوم",
+        price:"1,50 €",
+        desc:"Cremige Knoblauchsauce nach traditioneller Rezeptur."
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Salate",
+    arabic:"السلطات",
+    items:[
+
+      {
+        name:"Fatoush",
+        ar:"فتوش",
+        price:"6,90 €",
+        desc:"Frischer syrischer Salat mit knackigem Gemüse, Kräutern und Sumach."
+      },
+
+      {
+        name:"Tabouleh",
+        ar:"تبولة",
+        price:"6,90 €",
+        desc:"Frischer Petersiliensalat mit Tomaten, feinem Bulgur, Minze und Zitrone."
+      },
+
+      {
+        name:"Krautsalat",
+        ar:"سلطة روسية",
+        price:"3,90 €",
+        desc:"Feiner Weißkohlsalat mit Karotten und hausgemachtem Dressing."
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Bowls",
+    arabic:"بولز",
+    items:[
+
+      {
+        name:"Falafel Bowl",
+        ar:"سلطة الفلافل",
+        price:"7,90 €",
+        desc:"Knusprige Falafel mit frischem Salat, Hummus, eingelegtem Gemüse, Tahini-Sauce und Fladenbrot."
+      },
+
+      {
+        name:"Shawarma Bowl",
+        ar:"شاورما مع سلطة",
+        price:"8,90 €",
+        desc:"Mariniertes Hähnchenfleisch mit Reis, frischem Salat, Hummus, eingelegtem Gemüse und Knoblauchsauce."
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Shawarma",
+    arabic:"شاورما",
+    items:[
+
+      {
+        name:"Shawarma Hähnchen Rolle",
+        ar:"شاورما دجاج",
+        price:"6,00 €",
+        desc:"Zartes Hähnchenfleisch vom Spieß im arabischen Fladenbrot mit Knoblauchsauce und eingelegten Gurken."
+      },
+
+      {
+        name:"Shawarma Lamm Rolle",
+        ar:"شاورما لحم",
+        price:"7,00 €",
+        desc:"Zartes Lammfleisch vom Spieß im arabischen Fladenbrot mit Sesamsauce, Petersilie, Zwiebeln, Tomaten und eingelegten Rüben."
+      },
+
+      {
+        name:"Arabischer Hähnchen Teller",
+        ar:"شاورما عربي دجاج",
+        price:"11,90 €",
+        desc:"Geschnittene Hähnchen-Rolle mit Knoblauchsauce, Pommes, Krautsalat und eingelegten Gurken."
+      },
+
+      {
+        name:"Arabischer Lamm Teller",
+        ar:"شاورما عربي لحم",
+        price:"12,90 €",
+        desc:"Geschnittene Lamm-Rolle mit Sesamsauce, Pommes, Petersilie mit Zwiebeln und eingelegten Gurken."
+      },
+
+      {
+        name:"Pomm Hähnchen Shawarma",
+        ar:"بوكس شاورما دجاج",
+        price:"5,90 €",
+        desc:"Kleine Portion Hähnchen Shawarma mit Pommes und Knoblauchsauce."
+      },
+
+      {
+        name:"Pomm Lamm Shawarma",
+        ar:"بوكس شاورما لحم",
+        price:"6,90 €",
+        desc:"Kleine Portion Lamm Shawarma mit Pommes und Sesamsauce."
+      },
+
+      {
+        name:"Hähnchen Shawarma Teller",
+        ar:"وجبة شاورما دجاج",
+        price:"14,90 €",
+        desc:"Serviert mit Pommes oder Reis, Krautsalat, Knoblauchsauce und eingelegten Gurken."
+      },
+
+      {
+        name:"Lamm Shawarma Teller",
+        ar:"وجبة شاورما لحم",
+        price:"15,90 €",
+        desc:"Serviert mit Pommes oder Reis, Petersilie mit Zwiebeln, Sesamsauce und eingelegten Gurken."
+      },
+
+      {
+        name:"Marina Teller Hähnchen",
+        ar:"مارينا دجاج",
+        price:"14,90 €",
+        desc:"Shawarma Hähnchen im arabischen Fladenbrot mit Champignons, Käse und Mais, serviert mit Pommes, Salat und eingelegten Gurken."
+      },
+
+      {
+        name:"Marina Teller Lamm",
+        ar:"مارينا لحم",
+        price:"15,90 €",
+        desc:"Shawarma Lamm im arabischen Fladenbrot mit Champignons, Käse und Mais, serviert mit Pommes, Salat und eingelegten Gurken."
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Western Sandwich",
+    arabic:"قسم ساندويش الغربي",
+    items:[
+
+      {
+        name:"Crispy Sandwich",
+        ar:"كريسبي سندويش",
+        price:"7,50 €",
+        desc:"Frittiertes Hähnchen mit Pommes, Sauce, Tomaten, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Zinger Sandwich (Scharf)",
+        ar:"زنجر سندويش",
+        price:"7,50 €",
+        desc:"Frittiertes Hähnchen mit Pommes, scharfer Sauce, Tomaten, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Fajita Sandwich",
+        ar:"فاهيتا سندويش",
+        price:"7,50 €",
+        desc:"Hähnchen mit gegrilltem gemischten Paprika, Zwiebeln, Champignons, Avocadosauce, Käse, Tomaten, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Mexicano Sandwich (Scharf)",
+        ar:"مكسيكانو سندويش",
+        price:"7,50 €",
+        desc:"Hähnchen mit gegrilltem gemischten Paprika, Zwiebeln, Champignons, scharfer Sauce, Tomaten, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Espanyol Sandwich",
+        ar:"اسبانيول سندويش",
+        price:"7,50 €",
+        desc:"Hähnchen mit gegrilltem gemischten Paprika, Zwiebeln, Champignons, Sauce, Käse, Tomaten, Erbsen, Mais, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Chicken BBQ Sandwich",
+        ar:"باربيكيو تشيكن سندويش",
+        price:"7,50 €",
+        desc:"Hähnchen mit rauchigen Gewürzen, Barbecue Sauce, Käse, Tomaten, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Francisco Sandwich",
+        ar:"فرانسيسكو سندويش",
+        price:"7,50 €",
+        desc:"Hähnchen mit Champignons und Käse, Mais, Mayo, Tomaten, eingelegten Gurken und Krautsalat."
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Western Gerichte",
+    arabic:"وجبات غربية",
+    items:[
+
+      {
+        name:"Crispy Teller",
+        ar:"وجبة كريسبي",
+        price:"13,90 €",
+        desc:"4 Stück frittiertes Hähnchen, serviert mit Pommes, Sauce, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Zinger Teller (Scharf)",
+        ar:"وجبة زنجر",
+        price:"13,90 €",
+        desc:"4 Stück frittiertes Hähnchen, serviert mit Pommes, Sauce, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Fajita Teller",
+        ar:"وجبة فاهيتا",
+        price:"13,90 €",
+        desc:"Hähnchen mit gegrilltem gemischten Paprika, Zwiebeln, Champignons, Käse, serviert mit Pommes oder Reis, Avocadosauce, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Mexicano Teller (Scharf)",
+        ar:"وجبة مكسيكانو",
+        price:"13,90 €",
+        desc:"Hähnchen mit gegrilltem gemischten Paprika, Zwiebeln, Champignons, serviert mit Pommes oder Reis, scharfer Sauce, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Espanyol Teller",
+        ar:"وجبة اسبانيول",
+        price:"13,90 €",
+        desc:"Hähnchen mit gegrilltem gemischten Paprika, Zwiebeln, Champignons, Käse, Erbsen und Mais, serviert mit Pommes oder Reis, Sauce, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Chicken BBQ Teller",
+        ar:"وجبة باربيكيو تشيكن",
+        price:"13,90 €",
+        desc:"Hähnchen mit rauchigen Gewürzen, Barbecue Sauce und Käse, serviert mit Pommes oder Reis, Sauce, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Francisco Teller",
+        ar:"وجبة فرانسيسكو",
+        price:"13,90 €",
+        desc:"Hähnchen mit Champignons und Mais, serviert mit Pommes oder Reis, Sauce, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Falafel Teller",
+        ar:"وجبة فلافل",
+        price:"9,90 €",
+        desc:"Knusprige Falafel, serviert mit Pommes oder Reis, Sauce, eingelegten Gurken und Krautsalat."
+      },
+
+      {
+        name:"Halloumi Teller",
+        ar:"وجبة حلومي",
+        price:"9,90 €",
+        desc:"Gegrillter Halloumi mit frischem Salat, Pommes, Sauce, eingelegten Gurken und Krautsalat."
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Grill Gerichte",
+    arabic:"وجبات مشوية",
+    items:[
+
+      {
+        name:"Hackspiess Teller",
+        ar:"وجبة كباب",
+        price:"16,90 €",
+        desc:""
+      },
+
+      {
+        name:"Lammspiess Teller",
+        ar:"شقف غنم",
+        price:"18,90 €",
+        desc:""
+      },
+
+      {
+        name:"Lamm Koteletts",
+        ar:"ريش غنم",
+        price:"20,90 €",
+        desc:""
+      },
+
+      {
+        name:"Hähnchenspiess Teller",
+        ar:"شيش طاووق",
+        price:"16,90 €",
+        desc:""
+      },
+
+      {
+        name:"Hähnchen Geflügel",
+        ar:"وجبة جوانح",
+        price:"13,90 €",
+        desc:""
+      },
+
+      {
+        name:"Ganzes Hähnchen",
+        ar:"فروج على الفحم",
+        price:"19,90 €",
+        desc:""
+      },
+
+      {
+        name:"Halbes Hähnchen",
+        ar:"نصف فروج على الفحم",
+        price:"11,90 €",
+        desc:""
+      },
+
+      {
+        name:"Gem. Grill",
+        ar:"مشاوي مشكل",
+        price:"23,90 €",
+        desc:"Lammspiess, Hähnchenspiess, Hackspiess und Lammkotelett."
+      },
+
+      {
+        name:"Gem. Grill für 2 Personen",
+        ar:"مشاوي مشكل لشخصين",
+        price:"42,90 €",
+        desc:""
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Fleisch nach Gewicht",
+    arabic:"اللحم بالكيلو",
+    items:[
+
+      {
+        name:"Hackspiess 1 kg",
+        ar:"كيلو كباب غنم",
+        price:"39,90 €",
+        desc:""
+      },
+
+      {
+        name:"Hackspiess 0,5 kg",
+        ar:"نصف كيلو كباب غنم",
+        price:"22,90 €",
+        desc:""
+      },
+
+      {
+        name:"Hähnchenspiess 1 kg",
+        ar:"كيلو شيش طاووق",
+        price:"35,90 €",
+        desc:""
+      },
+
+      {
+        name:"Hähnchenspiess 0,5 kg",
+        ar:"نصف كيلو شيش طاووق",
+        price:"21,90 €",
+        desc:""
+      },
+
+      {
+        name:"Lammspiess 1 kg",
+        ar:"كيلو شقف غنم",
+        price:"44,90 €",
+        desc:""
+      },
+
+      {
+        name:"Lammspiess 0,5 kg",
+        ar:"نصف كيلو شقف غنم",
+        price:"24,90 €",
+        desc:""
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Empfehlungen unseres Chefs",
+    arabic:"وجبات نار المميزة",
+    items:[
+
+      {
+        name:"NAR Grill Special",
+        ar:"مشاوي نار المشكلة لأربعة أشخاص",
+        price:"115,00 €",
+        desc:"Gemischte NAR-Grillplatte für 4 Personen mit Lammkoteletts, Hähnchenspiess, Shawarma, gegrilltem Gemüse und Reis. Dazu frische Beilagen und Saucen."
+      },
+
+      {
+        name:"NAR Skapista Spezial",
+        ar:"سكابيستا اليونانية",
+        price:"17,90 €",
+        desc:"Gegrilltes Fladenbrot gefüllt mit zartem Hähnchenfleisch, frischem Gemüse, knusprigen Pommes und hausgemachter Skapista-Sauce."
+      },
+
+      {
+        name:"Lamm-Pfanne",
+        ar:"لحمة صاجية",
+        price:"18,90 €",
+        desc:"Zartes Lammfleisch mit frischem Gemüse, Zwiebeln, Paprika und orientalischen Gewürzen in der Pfanne zubereitet."
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Wraps",
+    arabic:"رابس",
+    items:[
+
+      {
+        name:"Hähnchenspiess Rolle",
+        ar:"سندويش شيش طاووق",
+        price:"8 €",
+        desc:"Gegrillter Hähnchenspiess im Fladenbrot mit frischem Salat, Tomaten, Zwiebeln und hausgemachter Sauce."
+      },
+
+      {
+        name:"Lammspiess Rolle",
+        ar:"سندويش شقف غنم",
+        price:"9 €",
+        desc:"Gegrillter Lammspiess im Fladenbrot mit frischem Salat, Tomaten, Zwiebeln und hausgemachter Sauce."
+      },
+
+      {
+        name:"Falafel Rolle",
+        ar:"سندويش فلافل",
+        price:"5 €",
+        desc:"Knusprige Falafel im Fladenbrot mit frischem Salat, Tomaten, Zwiebeln und Tahini-Sauce."
+      },
+
+      {
+        name:"Hackfleischspiess Rolle",
+        ar:"سندويش كباب",
+        price:"8 €",
+        desc:"Gegrillter Hackfleischspiess im Fladenbrot mit frischem Salat, Tomaten, Zwiebeln und hausgemachter Sauce."
+      },
+
+      {
+        name:"Halloumi Rolle",
+        ar:"سندويش حلومي",
+        price:"5 €",
+        desc:"Gegrillter Halloumi im Fladenbrot mit frischem Salat, Tomaten, Zwiebeln und hausgemachter Sauce."
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Desserts",
+    arabic:"حلويات",
+    items:[
+
+      {
+        name:"Künefe – Klein",
+        ar:"كنافة تركية",
+        price:"6,90 €",
+        desc:"Traditionelles orientalisches Dessert mit knusprigem Teig, feinem Käse und aromatischem Zuckersirup, serviert mit Pistazien."
+      },
+
+      {
+        name:"Künefe – Groß",
+        ar:"كنافة تركية",
+        price:"9,90 €",
+        desc:"Traditionelles orientalisches Dessert mit knusprigem Teig, feinem Käse und aromatischem Zuckersirup, serviert mit Pistazien."
+      }
+
+    ]
+  },
+
+
+  {
+    title:"Getränke",
+    arabic:"مشروبات",
+    items:[
+
+      {
+        name:"Coca Cola",
+        ar:"",
+        price:"2,50 €",
+        desc:""
+      },
+
+      {
+        name:"Cola Zero",
+        ar:"",
+        price:"2,50 €",
+        desc:""
+      },
+
+      {
+        name:"Fanta",
+        ar:"",
+        price:"2,50 €",
+        desc:""
+      },
+
+      {
+        name:"Sprite",
+        ar:"",
+        price:"2,50 €",
+        desc:""
+      },
+
+      {
+        name:"Spezi",
+        ar:"",
+        price:"2,50 €",
+        desc:""
+      },
+
+      {
+        name:"Apfelschorle",
+        ar:"",
+        price:"2,50 €",
+        desc:""
+      },
+
+      {
+        name:"Ice Tea Pfirsich",
+        ar:"",
+        price:"2,50 €",
+        desc:""
+      },
+
+      {
+        name:"Ayran",
+        ar:"",
+        price:"2,00 €",
+        desc:""
+      },
+
+      {
+        name:"Wasser",
+        ar:"",
+        price:"2,00 €",
+        desc:""
+      },
+
+      {
+        name:"Wasser 0,7 L",
+        ar:"",
+        price:"5,90 €",
+        desc:""
+      },
+
+      {
+        name:"Frischer Orangensaft",
+        ar:"",
+        price:"4,90 €",
+        desc:""
+      }
+
+    ]
   }
+
+];
+
+
+let arabic = false;
+
+
+function renderMenu(){
+
+  const container = document.getElementById("menuContainer");
+  const nav = document.getElementById("categoryNav");
+
+  container.innerHTML = "";
+  nav.innerHTML = "";
+
+  menuData.forEach((category,index)=>{
+
+    const id = "cat-" + index;
+
+    const navButton = document.createElement("button");
+
+    navButton.textContent =
+      arabic && category.arabic
+      ? category.arabic
+      : category.title;
+
+    navButton.onclick = () => {
+      document.getElementById(id).scrollIntoView({
+        behavior:"smooth"
+      });
+    };
+
+    nav.appendChild(navButton);
+
+
+    const categoryElement = document.createElement("div");
+
+    categoryElement.className = "menu-category";
+    categoryElement.id = id;
+
+
+    const heading = document.createElement("div");
+
+    heading.className = "category-title";
+
+    heading.innerHTML = `
+      <h3>
+        ${
+          arabic && category.arabic
+          ? category.arabic
+          : category.title
+        }
+      </h3>
+      <div class="category-line"></div>
+    `;
+
+    categoryElement.appendChild(heading);
+
+
+    const grid = document.createElement("div");
+
+    grid.className = "menu-grid";
+
+
+    category.items.forEach(item=>{
+
+      const card = document.createElement("div");
+
+      card.className = "menu-item";
+
+      const searchable =
+        (
+          item.name +
+          " " +
+          item.ar +
+          " " +
+          item.desc +
+          " " +
+          category.title +
+          " " +
+          category.arabic
+        ).toLowerCase();
+
+      card.dataset.search = searchable;
+
+
+      card.innerHTML = `
+
+        <div class="menu-item-main">
+
+          <div class="menu-item-title">
+            ${item.name}
+          </div>
+
+          ${
+            item.ar
+            ? `<div class="menu-item-ar">${item.ar}</div>`
+            : ""
+          }
+
+          ${
+            item.desc
+            ? `<div class="menu-description">${item.desc}</div>`
+            : ""
+          }
+
+        </div>
+
+        <div class="menu-price">
+          ${item.price}
+        </div>
+
+      `;
+
+      grid.appendChild(card);
+
+    });
+
+
+    categoryElement.appendChild(grid);
+
+    container.appendChild(categoryElement);
+
+  });
+
+}
+
+
+function filterMenu(){
+
+  const query =
+    document
+      .getElementById("menuSearch")
+      .value
+      .toLowerCase()
+      .trim();
+
+  document
+    .querySelectorAll(".menu-item")
+    .forEach(item=>{
+
+      const match =
+        item.dataset.search.includes(query);
+
+      item.classList.toggle("hidden",!match);
+
+    });
+
+
+  document
+    .querySelectorAll(".menu-category")
+    .forEach(category=>{
+
+      const visible =
+        [...category.querySelectorAll(".menu-item")]
+          .some(item=>!item.classList.contains("hidden"));
+
+      category.classList.toggle("hidden",!visible);
+
+    });
+
+}
+
+
+function toggleLang(){
+
+  arabic = !arabic;
+
+  document.documentElement.lang =
+    arabic ? "ar" : "de";
+
+  document.body.dir =
+    arabic ? "rtl" : "ltr";
+
+
+  document
+    .querySelectorAll("[data-de]")
+    .forEach(el=>{
+
+      el.textContent =
+        arabic
+        ? el.dataset.ar
+        : el.dataset.de;
+
+    });
+
+
+  const search =
+    document.getElementById("menuSearch");
+
+  search.placeholder =
+    arabic
+    ? "ابحث عن طبق..."
+    : "Gericht suchen...";
+
+
+  renderMenu();
+
+}
+
+
+renderMenu();
+
 </script>
 
 </body>
